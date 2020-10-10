@@ -1,0 +1,176 @@
+:root {
+  margin: 0px;
+  padding: 0px;
+  /* box-sizing: border-box; */
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Main Wrapper */
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.2fr 2.2fr 0.6fr;
+  grid-template-areas:
+    "header"
+    "main-content"
+    "footer";
+  grid-gap: 1rem;
+}
+
+/* Hidden Stuff Desktop Version */
+
+.nav-search,
+.navbar-logo {
+  display: none;
+}
+
+/* Navbar Code */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.top-navlinks,
+.bottom-navlinks {
+  display: flex;  
+  background-color: #000;
+  justify-content: space-between;
+}
+
+.left-top-navlinks,
+.right-top-navlinks {
+  display: flex;
+  padding: 0.2rem;
+}
+
+.left-top-navlink > a,
+.right-top-navlink > a {
+  text-decoration: none;
+  list-style: none;
+  color: lightgrey;
+  font-size: 0.7rem;
+}
+
+.bottom-navlinks {
+  background-color: #fff;
+}
+
+.left-bottom-navlinks {
+  display: flex;
+  padding: 0.8rem;
+  flex-grow: 22;
+}
+
+.left-bottom-navlink {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.left-bottom-navlink > a {
+  text-decoration: none;
+  color: grey;
+}
+
+.right-bottom-navsearch > i {
+  position: relative;
+  top: calc(40% - 10px);
+  left: calc(45% - 10px);
+  color: grey;
+  font-size: 2rem;
+}
+
+.right-bottom-navsearch {
+  flex-grow: 1;
+  border-left: 0.5px solid lightgrey;
+}
+
+.left-top-navlink > a:hover,
+.right-top-navlink > a:hover {
+  color: white;
+}
+
+.left-bottom-navlink > a:hover,
+.right-bottom-navlink > a:hover {
+  color: black;
+}
+
+.left-top-navlinks > .left-top-navlink:nth-child(1) > a {
+  color: white;
+}
+
+/* Navbar DONE */
+/*845w is the lowest the navbar can go without deforming */
+
+/* The big grid containing the main content starts here. 
+
+  Welcome to the Matrix.
+*/
+
+.content-grid {
+  display: grid;
+  grid-template-rows: 10% 10% 10% 10% 10%;
+  grid-template-areas:
+    "headline-posts"
+    "latest"
+    "funding"
+    "hardfork"
+    "latest";
+  gap: 2rem;
+}
+
+/* Headline posts start here */
+
+.headline-posts {
+  display: grid;
+  height: 70vh;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "main-headline-post second-headline-post"
+    "main-headline-post third-headline-post";
+  padding-top: 1rem;
+}
+
+/* Main Post styling */
+
+.main-headline-post { 
+  grid-area: main-headline-post;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/PlayStation-5-DualSense-796x417.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Main Ends styling */
+
+.second-headline-post { 
+  grid-area: second-headline-post;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://bit.ly/3ixcqM0');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.third-headline-post { 
+  grid-area: third-headline-post;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://bit.ly/2Sqlyrn');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* Headline posts end here */
+
+/* Latest News section starts here */
