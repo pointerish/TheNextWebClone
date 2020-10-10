@@ -56,6 +56,10 @@ img {
   padding: 0.2rem;
 }
 
+.right-top-navlinks {
+  padding-right: 1rem; 
+}
+
 .left-top-navlink > a,
 .right-top-navlink > a {
   text-decoration: none;
@@ -87,10 +91,11 @@ img {
 
 .right-bottom-navsearch > i {
   position: relative;
-  top: calc(40% - 10px);
-  left: calc(45% - 10px);
-  color: grey;
-  font-size: 2rem;
+  top: calc(45% - 10px);
+  left: calc(50% - 10px);
+  color: lightgrey;
+  font-size: 1.3rem;
+  transform: rotateY(180deg)
 }
 
 .right-bottom-navsearch {
@@ -106,6 +111,10 @@ img {
 .left-bottom-navlink > a:hover,
 .right-bottom-navlink > a:hover {
   color: black;
+}
+
+.right-bottom-navsearch > i:hover {
+  color: grey;
 }
 
 .left-top-navlinks > .left-top-navlink:nth-child(1) > a {
@@ -136,10 +145,10 @@ img {
 
 .headline-posts {
   display: grid;
-  height: 70vh;
+  height: 55vh;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1em 1em;
+  gap: 0.5em 0.5em;
   grid-template-areas:
     "main-headline-post second-headline-post"
     "main-headline-post third-headline-post";
