@@ -1,7 +1,6 @@
 :root {
   margin: 0px;
   padding: 0px;
-  /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -14,7 +13,7 @@ img {
 .grid-wrapper {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 0.2fr 2.2fr 0.6fr;
+  grid-template-rows: 0.1fr 2.8fr 0.1fr;
   grid-template-areas:
     "header"
     "main-content"
@@ -45,7 +44,7 @@ img {
 
 .top-navlinks,
 .bottom-navlinks {
-  display: flex;  
+  display: flex;
   background-color: #000;
   justify-content: space-between;
 }
@@ -57,7 +56,7 @@ img {
 }
 
 .right-top-navlinks {
-  padding-right: 1rem; 
+  padding-right: 1rem;
 }
 
 .left-top-navlink > a,
@@ -124,21 +123,20 @@ img {
 /* Navbar DONE */
 /*845w is the lowest the navbar can go without deforming */
 
-/* The big grid containing the main content starts here. 
+/* The big grid containing the main content starts here.
 
   Welcome to the Matrix.
 */
 
 .content-grid {
   display: grid;
-  grid-template-rows: 10% 10% 10% 10% 10%;
   grid-template-areas:
     "headline-posts"
     "latest"
     "funding"
     "hardfork"
     "latest";
-  gap: 2rem;
+  gap: 4rem;
 }
 
 /* Headline posts start here */
@@ -157,29 +155,295 @@ img {
 
 /* Main Post styling */
 
-.main-headline-post { 
+.main-headline-post {
   grid-area: main-headline-post;
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/PlayStation-5-DualSense-796x417.jpg');
   background-position: center center;
   background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 65% 5% 20% 10%;
+  grid-template-areas:
+    "main-headline-logo main-headline-date"
+    "action"
+    "post-title"
+    "details";
+}
+
+.action,
+.post-title,
+.details {
+  grid-column: 1/3;
+  padding-left: 2rem;
+}
+
+.main-headline-logo {
+  background: url('https://bit.ly/3njrQXY');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 28rem;
+}
+
+.main-headline-date {
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.action {
+  text-transform: uppercase;
+  color: white;
+}
+
+.post-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: -2rem;
+  line-height: 3.5rem;
+}
+
+.details {
+  color: grey;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
 }
 
 /* Main Ends styling */
 
-.second-headline-post { 
+.second-headline-post {
   grid-area: second-headline-post;
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://bit.ly/3ixcqM0');
   background-size: 100%;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.third-headline-post { 
+.thirdpost-title,
+.secondpost-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem;
+}
+
+.third-headline-post {
   grid-area: third-headline-post;
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)), url('https://bit.ly/2Sqlyrn');
   background-size: 100%;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.thirdpost-title {
+  padding: 0.3rem 0 0.5rem 0.5rem;
+  font-size: 1.5rem;
+}
+
+.third-headline-post > .action {
+  padding: 0.3rem 0 0 0.5rem;
+  color: white;
+}
+
+.third-headline-post > .details-third {
+  padding-left: 0.5rem;
+  color: grey;
+  font-size: 0.8rem;
 }
 
 /* Headline posts end here */
 
-/* Latest News section starts here */
+/* Latest News and Latest Deals section starts here */
+
+.latest {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-title {
+  color: orangered;
+  font-weight: bold;
+}
+
+.latest-news-articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.latest-new {
+  padding-bottom: 0;
+}
+
+.latest-new-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.latest-new-details {
+  padding-top: 0;
+  font-size: 0.9rem;
+}
+
+/* Latest News and Latest Deals section ends here */
+
+/* Funding section starts here */
+
+
+
+/* Funding section ends here */
+
+/* Hard Fork section starts here */
+
+
+
+/* Hard Fork section ends here */
+
+/* Footer starts here */
+
+.footer-container {
+  display: grid;
+  grid-template-areas: 
+    "social-icons"
+    "enterprise-links"
+    "bottom-section";
+  background-color: #131313;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.social-icons {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-block;
+  list-style: none;
+  padding: 1rem;
+}
+
+.social-icon > a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.enterprise-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.footer-link {
+  list-style: none;
+  padding: 0 0.5rem 1.5rem 0.5rem;
+}
+
+.footer-link > a {
+  text-decoration: none;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.bottom-section {
+  display: flex;
+  background-color: #000;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.stackpath,
+.tnw-footer-logo {
+  height: 0.8rem;
+  width: 3rem;
+  padding-top: 0.2rem;
+}
+
+.bottom-section > span {
+  font-size: 0.8rem;
+  color: white;
+  display: inline-block;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+/* Enter media queries... */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .navbar-logo {
+    background-image: url('https://bit.ly/3njrQXY');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    background-color: black;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-areas: 
+     "navbar-logo navlinks";
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+    background-color: white;
+  }
+
+  .navlinks {
+    font-size: 0.7rem;
+  }
+
+  .left-bottom-navlinks,
+  .right-bottom-navlinks {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
+  .shift,
+  .neural {
+    display: none;
+  }
+
+  .headline-posts {
+    height: 40vh;
+  }
+
+  .main-headline-date,
+  .main-headline-logo {
+    display: none;
+  }
+
+  .main-headline-post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .thirdpost-title,
+  .secondpost-title {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.8rem;
+}
+
+}
