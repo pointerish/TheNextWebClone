@@ -260,7 +260,8 @@ img {
 
 /* Latest News and Latest Deals section starts here */
 
-.latest {
+.latest,
+.funding {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -297,12 +298,107 @@ img {
 
 /* Funding section starts here */
 
+.funding {
+  display: flex;
+  flex-direction: column;
+}
 
+.funding-title-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.funding-details {
+  display: flex;
+}
+
+.funding-detail {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.funding-articles {
+  display: grid;
+
+}
+
+.funding-detail > a,
+.funding-title-details > h2 > a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.funding-detail > a:hover,
+.funding-title-details > h2 > a:hover {
+  color: black;
+}
+
+.funding-articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.funding-article-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.funding-article-img {
+  background-color: black;
+  width: 4%;
+  height: 8%;
+
+}
+
+.funding-article-title { 
+  display: flex;
+  justify-content: space-around;
+  background-color: #FF4422;
+  color: white;
+  text-align: end;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.funding-amount,
+.funding-amount-detail {
+  background-color: #FFEBE8;
+  text-align: end;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+}
 
 /* Funding section ends here */
 
 /* Hard Fork section starts here */
 
+.hardfork {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hardfork-article {
+  display: grid;
+}
+
+.bullet-article {
+  color: orangered;
+  font-size: 0.8rem;
+}
+
+.bullet-article > a {
+  text-decoration: none;
+  color: grey;
+  font-size: 0.8rem;
+}
 
 
 /* Hard Fork section ends here */
